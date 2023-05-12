@@ -1,0 +1,33 @@
+name: Test
+on:
+ push: 
+  branches: ["main"]
+  
+jobs:
+ build:
+  runs-on: ubuntu-latest
+  steps:
+   - uses: actions/checkout@v3
+   
+   - name: Run a one-line script
+     run: echo Hello,world!
+     
+   - name: Run multi-line script
+     run: |
+      echo Add other actions to build.
+      echo test, and deploy your project
+      
+ test-job:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+   
+    - name: Run a one-line script
+      run: echo Welcome to GHA!
+     
+    - name: Run multi-line script
+      run: |
+       echo Add other actions to build.
+       echo test, and deploy your project
+   
+ 
