@@ -1,0 +1,13 @@
+name: GHA Demo
+run-name: ${{github.actor}} is presenting GHA
+on:
+ push:
+  branches: ["master"]
+  
+jobs:
+ build:
+  runs-on: ubuntu-latest
+  steps:
+   - uses: actions/checkout@v3
+   - name: Run a on-line script
+     run: echo Hello world!
